@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Stories</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+	<!-- start app -->
+	<div class="app-wrapper">
+		
+		<!-- start header -->
+		<div class="header">
+			<div class="container">
+
+
+				<a href="" class="back-btn"><img src="img/back-grey.svg" alt="" >Back</a>
+				</div>
+				
+
+					
+		</div>
+		<!-- end header -->
+
+
+		<div class="chat-upload-page">
+			<div class="chat-upload-content">
+				<img src="img/chat-photo.png" alt="" class="chat-photo">
+
+				<div class="chat-bable">
+					Preparing private chat room...
+				</div>
+
+				<div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="progress-text" id="progressText">0%</div>
+  </div>
+
+			</div>
+		</div>
+		
+
+	
+
+	</div>
+
+	
+	<div class="join-button fixed-button-wrapper">
+		<div class="container">
+			<a href="index.html" class="button">
+				<span>
+					Join Now
+				</span>
+				
+			</a>
+			
+		</div>
+	</div>
+	<!-- end app -->
+
+	<script>
+  const progressBar = document.getElementById('progressBar');
+  const progressText = document.getElementById('progressText');
+  const chatBable = document.querySelector('.chat-bable');
+  const joinButton = document.querySelector('.join-button');
+
+  const duration = 2000; // 2 секунды
+  const fps = 60;
+  const totalSteps = duration / (1000 / fps);
+  let currentStep = 0;
+
+  const interval = setInterval(() => {
+    currentStep++;
+    const progress = Math.min(currentStep / totalSteps, 1);
+    const percent = Math.round(progress * 100);
+
+    progressBar.style.width = percent + '%';
+    progressText.textContent = percent + '%';
+
+    if (progress >= 1) {
+      clearInterval(interval);
+      chatBable.textContent = 'Your private chat is ready!';
+      joinButton.style.display = 'block';
+    }
+  }, 1000 / fps);
+</script>
+
+
+	<script src="js/main.js"></script>
+</body>
+</html>

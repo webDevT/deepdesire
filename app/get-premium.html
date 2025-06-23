@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Stories</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<style>
+ 
+</style>
+	<!-- start app -->
+	<div class="app-wrapper">
+		
+		<!-- start header -->
+		<div class="header">
+			<div class="container">
+
+				<div class="header-left">
+					<a href="index.html" class="back-button">
+					<img src="img/back.svg" alt="">
+				</a>
+
+				<div class="header__title">
+					 Get Premium
+				</div>
+				</div>
+				
+
+			</div>			
+		</div>
+		<!-- end header -->
+
+		<!-- start slider section -->
+		<div class="slider-section">
+			<div class="container">
+				<div class="slider">
+
+				<div class="slider__item">
+					<img src="img/slide1.svg" alt="">
+					<div class="slider__title">
+						2000 gems
+					</div>
+				</div>
+
+				<div class="slider__item">
+					<img src="img/slide2.svg" alt="">
+					<div class="slider__title">
+						100+ Characters
+					</div>
+				</div>
+
+				<div class="slider__item">
+					<img src="img/slide3.svg" alt="">
+					<div class="slider__title">
+						Premium Stories
+					</div>
+				</div>
+
+				<div class="slider__item">
+					<img src="img/slide4.svg" alt="">
+					<div class="slider__title">
+						Instant Answers
+					</div>
+				</div>
+
+			</div>
+			</div>					
+			
+		</div>
+		<!-- end slider section -->
+
+		<!-- start plans section -->
+		<section class="plans-section">
+			<div class="container">
+				
+				<div class="plans-list">
+
+					<!-- star plan item -->
+					<div class="plan-item">
+
+						<div class="plan-item__top">
+							<div class="plan-item__price">
+							$4,99
+						</div>
+
+						<div class="plan-item__sub-title">
+							/monthly
+						</div>
+
+						<div class="plan-item__prev-price">
+							$9,99
+						</div>
+						</div>
+
+						<div class="plan-item__bottom">
+							6 months
+						</div>
+											
+					</div>
+					<!-- end plan item -->
+
+					<!-- star plan item -->
+					<div class="plan-item active">
+
+						<div class="best-price">
+							best price
+						</div>
+						<div class="plan-item__top">
+							<div class="plan-item__price">
+							$4,99
+						</div>
+
+						<div class="plan-item__sub-title">
+							/monthly
+						</div>
+
+						<div class="plan-item__prev-price">
+							$9,99
+						</div>
+
+						<div class="discount">
+							Save 50%
+						</div>
+						</div>
+
+						<div class="plan-item__bottom">
+							6 months
+						</div>
+											
+					</div>
+					<!-- end plan item -->
+
+					<!-- star plan item -->
+					<div class="plan-item">
+
+						<div class="plan-item__top">
+							<div class="plan-item__price">
+							$4,99
+						</div>
+
+						<div class="plan-item__sub-title">
+							/monthly
+						</div>
+
+						<div class="plan-item__prev-price">
+							$9,99
+						</div>
+						</div>
+
+						<div class="plan-item__bottom">
+							6 months
+						</div>
+											
+					</div>
+					<!-- end plan item -->
+
+				</div>
+
+				<a href="shop.html" class="get-premium__button">
+							<img src="img/crown.svg" alt="">
+							<span>Continue</span>
+							
+						</a>
+
+						<div class="total-price">
+							Total $50.04
+						</div>
+
+			</div>
+		</section>
+		<!-- end plans section -->
+
+		
+		
+
+
+		
+
+	
+
+	</div>
+	<!-- end app -->
+	 <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+	$('.slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  prevArrow: false,
+  nextArrow: false,
+  dots: true
+});
+	
+</script>
+	<script src="js/main.js"></script>
+<script>
+  document.querySelectorAll('.plan-item').forEach(item => {
+    item.addEventListener('click', () => {
+      document.querySelectorAll('.plan-item').forEach(el => el.classList.remove('active'));
+      item.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
